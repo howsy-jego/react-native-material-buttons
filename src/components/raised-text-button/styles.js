@@ -1,12 +1,11 @@
-import { StyleSheet, Platform } from 'react-native';
-import RN from 'react-native/package.json';
+import { StyleSheet, Platform } from "react-native";
+import RN from "react-native/package.json";
 
 let style = {};
-let [, major, minor] = RN.version
-  .match(/^(\d+)\.(\d+)\.(.+)$/);
+let [, major, minor] = RN.version.match(/^(\d+)\.(\d+)\.(.+)$/);
 
-if ('android' === Platform.OS) {
-  style.textAlignVertical = 'center';
+if ("android" === Platform.OS) {
+  style.textAlignVertical = "center";
 
   if (!major && minor >= 40) {
     style.includeFontPadding = false;
@@ -15,13 +14,13 @@ if ('android' === Platform.OS) {
 
 const styles = StyleSheet.create({
   title: {
-    textAlign: 'center',
-    textTransform: 'uppercase',
+    textAlign: "center",
+    textTransform: "uppercase",
 
-    backgroundColor: 'transparent',
+    backgroundColor: "transparent",
 
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: "500",
 
     ...style,
   },
